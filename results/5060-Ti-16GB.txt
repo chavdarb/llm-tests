@@ -1,0 +1,141 @@
+==============================================
+Ollama Model Benchmark Results
+==============================================
+Date: Tue Feb 17 22:10:33 EET 2026
+Models: qwen3:8b gpt-oss:20b qwen2.5-coder:14b-instruct qwen3-coder:30b qwen3:14b llama3.1:8b devstral-small-2:24b
+Runs per model: 5
+Warmup runs: 2
+Max tokens: 8192
+Context window: 4096
+Prompt file: prompts.txt
+==============================================
+
+==============================================
+Model: qwen3:8b
+==============================================
+Benchmarking qwen3:8b @ http://localhost:11434
+runs=5, warmup=2, num_predict=8192, num_ctx=4096
+----
+run 01: TTFT=12.964s  gen_tps=71.35  prompt_tps=1710.30
+run 02: TTFT=13.055s  gen_tps=71.15  prompt_tps=1725.12
+run 03: TTFT=12.898s  gen_tps=71.13  prompt_tps=1720.65
+run 04: TTFT=13.045s  gen_tps=70.91  prompt_tps=1698.29
+run 05: TTFT=13.121s  gen_tps=70.98  prompt_tps=1691.05
+----
+TTFT (s): mean=13.0165  median=13.0450  p95=13.1210  n=5
+Gen TPS (tok/s): mean=71.1041  median=71.1285  p95=71.3541  n=5
+Prompt TPS (tok/s): mean=1709.0800  median=1710.2997  p95=1725.1152  n=5
+Total latency (s): mean=18.5915  median=18.5769  p95=18.7083  n=5
+
+
+==============================================
+Model: gpt-oss:20b
+==============================================
+Benchmarking gpt-oss:20b @ http://localhost:11434
+runs=5, warmup=2, num_predict=8192, num_ctx=4096
+----
+run 01: TTFT=1.184s  gen_tps=87.92  prompt_tps=6107.24
+run 02: TTFT=1.234s  gen_tps=89.04  prompt_tps=6256.90
+run 03: TTFT=1.182s  gen_tps=88.21  prompt_tps=3237.37
+run 04: TTFT=1.231s  gen_tps=89.47  prompt_tps=6120.13
+run 05: TTFT=1.168s  gen_tps=89.06  prompt_tps=6330.72
+----
+TTFT (s): mean=1.1999  median=1.1843  p95=1.2342  n=5
+Gen TPS (tok/s): mean=88.7396  median=89.0358  p95=89.4723  n=5
+Prompt TPS (tok/s): mean=5610.4711  median=6120.1273  p95=6330.7166  n=5
+Total latency (s): mean=12.4950  median=12.5669  p95=12.5755  n=5
+
+
+==============================================
+Model: qwen2.5-coder:14b-instruct
+==============================================
+Benchmarking qwen2.5-coder:14b-instruct @ http://localhost:11434
+runs=5, warmup=2, num_predict=8192, num_ctx=4096
+----
+run 01: TTFT=0.169s  gen_tps=55.30  prompt_tps=2122.00
+run 02: TTFT=0.170s  gen_tps=49.52  prompt_tps=1878.56
+run 03: TTFT=0.176s  gen_tps=51.88  prompt_tps=1788.55
+run 04: TTFT=0.169s  gen_tps=58.98  prompt_tps=1809.95
+run 05: TTFT=0.169s  gen_tps=53.75  prompt_tps=1911.15
+----
+TTFT (s): mean=0.1707  median=0.1695  p95=0.1762  n=5
+Gen TPS (tok/s): mean=53.8868  median=53.7544  p95=58.9787  n=5
+Prompt TPS (tok/s): mean=1902.0442  median=1878.5648  p95=2122.0015  n=5
+Total latency (s): mean=11.1101  median=11.1012  p95=11.1923  n=5
+
+
+==============================================
+Model: qwen3-coder:30b
+==============================================
+Benchmarking qwen3-coder:30b @ http://localhost:11434
+runs=5, warmup=2, num_predict=8192, num_ctx=4096
+----
+run 01: TTFT=0.188s  gen_tps=33.03  prompt_tps=750.35
+run 02: TTFT=0.181s  gen_tps=33.17  prompt_tps=737.76
+run 03: TTFT=0.183s  gen_tps=33.26  prompt_tps=744.63
+run 04: TTFT=0.178s  gen_tps=33.04  prompt_tps=690.44
+run 05: TTFT=0.181s  gen_tps=32.90  prompt_tps=743.56
+----
+TTFT (s): mean=0.1821  median=0.1808  p95=0.1877  n=5
+Gen TPS (tok/s): mean=33.0779  median=33.0368  p95=33.2569  n=5
+Prompt TPS (tok/s): mean=733.3473  median=743.5603  p95=750.3478  n=5
+Total latency (s): mean=24.3083  median=24.2076  p95=24.6951  n=5
+
+
+==============================================
+Model: qwen3:14b
+==============================================
+Benchmarking qwen3:14b @ http://localhost:11434
+runs=5, warmup=2, num_predict=8192, num_ctx=4096
+----
+run 01: TTFT=17.837s  gen_tps=41.80  prompt_tps=1062.07
+run 02: TTFT=17.708s  gen_tps=41.80  prompt_tps=1075.57
+run 03: TTFT=17.748s  gen_tps=41.81  prompt_tps=1068.28
+run 04: TTFT=17.784s  gen_tps=41.75  prompt_tps=1067.39
+run 05: TTFT=18.106s  gen_tps=41.75  prompt_tps=1066.12
+----
+TTFT (s): mean=17.8364  median=17.7837  p95=18.1058  n=5
+Gen TPS (tok/s): mean=41.7831  median=41.7957  p95=41.8114  n=5
+Prompt TPS (tok/s): mean=1067.8864  median=1067.3945  p95=1075.5703  n=5
+Total latency (s): mean=30.7957  median=30.7319  p95=31.0243  n=5
+
+
+==============================================
+Model: llama3.1:8b
+==============================================
+Benchmarking llama3.1:8b @ http://localhost:11434
+runs=5, warmup=2, num_predict=8192, num_ctx=4096
+----
+run 01: TTFT=0.188s  gen_tps=88.24  prompt_tps=2002.49
+run 02: TTFT=0.190s  gen_tps=88.63  prompt_tps=2018.53
+run 03: TTFT=0.188s  gen_tps=87.75  prompt_tps=2066.42
+run 04: TTFT=0.190s  gen_tps=87.99  prompt_tps=2059.16
+run 05: TTFT=0.186s  gen_tps=89.19  prompt_tps=2053.37
+----
+TTFT (s): mean=0.1884  median=0.1884  p95=0.1903  n=5
+Gen TPS (tok/s): mean=88.3597  median=88.2428  p95=89.1857  n=5
+Prompt TPS (tok/s): mean=2039.9933  median=2053.3730  p95=2066.4207  n=5
+Total latency (s): mean=8.1772  median=8.1828  p95=8.2200  n=5
+
+
+==============================================
+Model: devstral-small-2:24b
+==============================================
+Benchmarking devstral-small-2:24b @ http://localhost:11434
+runs=5, warmup=2, num_predict=8192, num_ctx=4096
+----
+run 01: TTFT=0.248s  gen_tps=19.68  prompt_tps=10797.50
+run 02: TTFT=0.253s  gen_tps=19.70  prompt_tps=10696.82
+run 03: TTFT=0.244s  gen_tps=19.69  prompt_tps=10715.94
+run 04: TTFT=0.249s  gen_tps=19.70  prompt_tps=10749.18
+run 05: TTFT=0.250s  gen_tps=19.70  prompt_tps=10885.69
+----
+TTFT (s): mean=0.2487  median=0.2486  p95=0.2527  n=5
+Gen TPS (tok/s): mean=19.6955  median=19.6954  p95=19.7043  n=5
+Prompt TPS (tok/s): mean=10769.0239  median=10749.1765  p95=10885.6908  n=5
+Total latency (s): mean=28.6251  median=28.6205  p95=28.6531  n=5
+
+
+==============================================
+Benchmark completed at Tue Feb 17 22:27:35 EET 2026
+==============================================

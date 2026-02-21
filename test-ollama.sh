@@ -1,1 +1,1 @@
-./test-multiple-models.sh --prompt-file prompts.txt -o 4070-Super-12GB.txt qwen3:8b gpt-oss:20b qwen2.5-coder:14b-instruct qwen3-coder:30b qwen3:14b llama3.1:8b
+./test-multiple-models.sh --prompt-file prompts.txt -o 5060-Ti-16GB.txt qwen3:8b gpt-oss:20b qwen2.5-coder:14b-instruct qwen3-coder:30b qwen3:14b llama3.1:8b devstral-small-2:24b
